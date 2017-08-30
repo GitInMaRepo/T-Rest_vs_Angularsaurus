@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Microservatops.Tests
 {
@@ -20,7 +21,7 @@ namespace Microservatops.Tests
             new Dinosaur{Name = "Procompsognatus"}
             };
 
-            allKnownDinos.Should().BeEquivalentTo(expected);
+            allKnownDinos.ShouldBeEquivalentTo(expected) ;
         }
     }
 }
