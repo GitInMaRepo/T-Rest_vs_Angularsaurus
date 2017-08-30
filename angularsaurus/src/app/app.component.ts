@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'The Dino App';
+  dinos: string[] = new Array("T-Rex", "Triceratops", "Procompsognatus");
 }
