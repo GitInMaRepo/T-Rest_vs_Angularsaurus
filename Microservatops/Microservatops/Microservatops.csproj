@@ -55,6 +55,7 @@
     <Compile Include="DinosaurRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tyrannoservice_Rest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
