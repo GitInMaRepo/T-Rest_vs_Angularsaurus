@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {stegoservice} from './services/stegoservice';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'The Dino App';
-  dinos: string[] = new Array("T-Rex", "Triceratops", "Procompsognatus");
+  title = 'The Dino List';
+  dinos: string[];
+
+  constructor(private dinoService: stegoservice){
+      this.dinos = dinoService.getDinos();
+  }
 }
