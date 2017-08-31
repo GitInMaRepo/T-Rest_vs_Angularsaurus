@@ -9,11 +9,13 @@ import {Dinosaur} from './models/dinosaur';
 })
 export class AppComponent {
   title = 'The Dino List';
-  dinoNames: string[];
   dinos: Dinosaur[];
+  dinosFromTRest: Dinosaur[];
 
   constructor(private dinoService: stegoservice){
-      this.dinoNames = dinoService.getDinoNames();
       this.dinos = dinoService.getDinos();
+  }
+  ngOnInit(){
+      this.dinoService.getDinosFromTRest().subscribe(p => this.dinosFromTRest = p);
   }
 }

@@ -1,15 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Optional } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 import { Dinosaur } from 'app/models/dinosaur';
 
 @Injectable()
 export class stegoservice {
-    constructor(@Optional() private dinoNames: string[]){
-        this.dinoNames = new Array("T-Rex", "Triceratops", "Procompsognatus");
-    }
 
-    getDinoNames() : string[] {
-        return this.dinoNames
+    constructor(private http: Http) {
     }
 
     getDinos() :Dinosaur[] {
@@ -19,5 +16,11 @@ export class stegoservice {
             { "name": "Procompsognatus" }
         ];
         return arr;
+    }
+
+    getDinosFromTRest() :Observable<Dinosaur[]>{
+        return this.http.get('http://localhost:8088/knowndinosaurs')
+        .map((response: Response) => response.json())
+        .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 }
