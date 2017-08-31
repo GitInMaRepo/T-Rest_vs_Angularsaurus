@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {stegoservice} from './services/stegoservice';
+import {Dinosaur} from './models/dinosaur';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,11 @@ import {stegoservice} from './services/stegoservice';
 })
 export class AppComponent {
   title = 'The Dino List';
-  dinos: string[];
+  dinoNames: string[];
+  dinos: Dinosaur[];
 
   constructor(private dinoService: stegoservice){
+      this.dinoNames = dinoService.getDinoNames();
       this.dinos = dinoService.getDinos();
   }
 }
