@@ -12,7 +12,10 @@ namespace Microservatops
 
             Get["/knowndinosaurs"] = _ =>
             {
-                return Response.AsJson(dinos.GetDinosaurs());
+                return Response.AsJson(dinos.GetDinosaurs())
+                            .WithHeader("Access-Control-Allow-Origin", "*")
+                            .WithHeader("Access-Control-Allow-Methods", "POST,GET")
+                            .WithHeader("Access-Control-Allow-Headers", "Accept, Origin, Content-type"); ;
             };
         }
     }
