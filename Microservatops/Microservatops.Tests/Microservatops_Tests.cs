@@ -21,5 +21,16 @@ namespace Microservatops.Tests
 
             allKnownDinos.ShouldBeEquivalentTo(expected) ;
         }
+
+        [TestMethod]
+        public void GetASpecificDinosaur()
+        {
+            var target = new DinosaurRepository();
+            var resultingDino = target.GetDinosaur(1);
+
+            var expected = new Dinosaur{Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"};
+
+            resultingDino.ShouldBeEquivalentTo(expected);
+        }
     }
 }

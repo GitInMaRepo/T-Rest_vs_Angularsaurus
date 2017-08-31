@@ -20,5 +20,10 @@ namespace Microservatops
         {
             return allDinos;
         }
+
+        public Dinosaur GetDinosaur(int index)
+        {
+            return allDinos[index];
+        }
     }
 }
