@@ -7,14 +7,12 @@
 </div>
 <div style="text-align:center">
   <ul>
-      <li *ngFor="let dino of dinos">
-        {{dino.name}}
-      </li>
-    </ul>
-    <ul>
-        <li *ngFor="let dino of dinosFromTRest">
-          {{dino.name}}
-        </li>
-      </ul>
+    <li *ngFor="let dino of dinosFromTRest">
+      Name: {{dino.name}} <br />
+      Size: {{dino.size}} <br />
+      Went extinct: {{dino.extinction}} <br />
+      <br />
+    </li>
+  </ul>
 </div>
 

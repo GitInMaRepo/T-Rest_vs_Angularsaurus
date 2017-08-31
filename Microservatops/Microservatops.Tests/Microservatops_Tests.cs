@@ -14,9 +14,9 @@ namespace Microservatops.Tests
 
             var expected = new List<Dinosaur>
             {
-            new Dinosaur{Name = "T-Rex"},
-            new Dinosaur{Name = "Triceratops"},
-            new Dinosaur{Name = "Procompsognatus"}
+            new Dinosaur{Name = "T-Rex", Size = "12 m", Extinction = "66 mil. years ago"},
+            new Dinosaur{Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"},
+            new Dinosaur{Name = "Procompsognathus", Size = "1m", Extinction = "200 mil. years ago"}
             };
 
             allKnownDinos.ShouldBeEquivalentTo(expected) ;
