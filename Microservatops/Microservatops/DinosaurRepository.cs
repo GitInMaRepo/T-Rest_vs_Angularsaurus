@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Microservatops
 {
@@ -10,9 +11,9 @@ namespace Microservatops
         {
             allDinos = new List<Dinosaur>
             {
-            new Dinosaur{Name = "T-Rex", Size = "12 m", Extinction = "66 mil. years ago"},
-            new Dinosaur{Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"},
-            new Dinosaur{Name = "Procompsognathus", Size = "1m", Extinction = "200 mil. years ago"}
+            new Dinosaur{Id = 1, Name = "T-Rex", Size = "12 m", Extinction = "66 mil. years ago"},
+            new Dinosaur{Id = 2, Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"},
+            new Dinosaur{Id = 3, Name = "Procompsognathus", Size = "1m", Extinction = "200 mil. years ago"}
             };
         }
 
@@ -21,9 +22,9 @@ namespace Microservatops
             return allDinos;
         }
 
-        public Dinosaur GetDinosaur(int index)
+        public Dinosaur GetDinosaur(int id)
         {
-            return allDinos[index];
+            return allDinos.FirstOrDefault(f => f.Id == id);
         }
     }
 }

@@ -8,7 +8,7 @@
 <div style="text-align:center">
   <ul>
     <li *ngFor="let dino of dinosFromTRest">
-      Name: {{dino.name}} <br />
+      <a href="http://localhost:8088/dinosaur/{{dino.id}}"> Name: {{dino.name}} </a><br />
       Size: {{dino.size}} <br />
       Went extinct: {{dino.extinction}} <br />
       <br />

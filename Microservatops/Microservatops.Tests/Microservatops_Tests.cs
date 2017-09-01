@@ -14,9 +14,9 @@ namespace Microservatops.Tests
 
             var expected = new List<Dinosaur>
             {
-            new Dinosaur{Name = "T-Rex", Size = "12 m", Extinction = "66 mil. years ago"},
-            new Dinosaur{Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"},
-            new Dinosaur{Name = "Procompsognathus", Size = "1m", Extinction = "200 mil. years ago"}
+            new Dinosaur{Id = 1, Name = "T-Rex", Size = "12 m", Extinction = "66 mil. years ago"},
+            new Dinosaur{Id = 2, Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"},
+            new Dinosaur{Id = 3, Name = "Procompsognathus", Size = "1m", Extinction = "200 mil. years ago"}
             };
 
             allKnownDinos.ShouldBeEquivalentTo(expected) ;
@@ -26,9 +26,9 @@ namespace Microservatops.Tests
         public void GetASpecificDinosaur()
         {
             var target = new DinosaurRepository();
-            var resultingDino = target.GetDinosaur(1);
+            var resultingDino = target.GetDinosaur(2);
 
-            var expected = new Dinosaur{Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"};
+            var expected = new Dinosaur{Id = 2, Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"};
 
             resultingDino.ShouldBeEquivalentTo(expected);
         }
