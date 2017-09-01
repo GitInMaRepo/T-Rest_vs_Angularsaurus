@@ -26,5 +26,12 @@ namespace Microservatops
         {
             return allDinos.FirstOrDefault(f => f.Id == id);
         }
+
+        public void AddNewDinosaur(Dinosaur dinosaur)
+        {
+            var newIndex = allDinos.Max(f => f.Id);
+            dinosaur.Id = ++newIndex;
+            allDinos.Add(dinosaur);
+        }
     }
 }

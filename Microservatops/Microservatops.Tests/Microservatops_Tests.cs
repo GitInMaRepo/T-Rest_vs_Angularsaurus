@@ -32,5 +32,25 @@ namespace Microservatops.Tests
 
             resultingDino.ShouldBeEquivalentTo(expected);
         }
+
+        [TestMethod]
+        public void AddADinosaur()
+        {
+            var target = new DinosaurRepository();
+
+            target.AddNewDinosaur(new Dinosaur { Id = 0, Name = "Struthiomimus", Size = "2", Extinction = "66 mil. years ago" });
+
+            var allKnownDinos = target.GetDinosaurs();
+            var expected = new List<Dinosaur>
+            {
+            new Dinosaur{Id = 1, Name = "T-Rex", Size = "12 m", Extinction = "66 mil. years ago"},
+            new Dinosaur{Id = 2, Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"},
+            new Dinosaur{Id = 3, Name = "Procompsognathus", Size = "1m", Extinction = "200 mil. years ago"},
+            new Dinosaur{Id = 4, Name = "Struthiomimus", Size = "2", Extinction = "66 mil. years ago" }
+            };
+
+            allKnownDinos.ShouldBeEquivalentTo(expected);
+
+        }
     }
 }
