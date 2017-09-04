@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { stegoservice } from './services/stegoservice'
+import { stegoservice } from './services/stegoservice';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
+import { DinoDetailComponent } from './dino_detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DinoDetailComponent
   ],
   imports: [
     BrowserModule,

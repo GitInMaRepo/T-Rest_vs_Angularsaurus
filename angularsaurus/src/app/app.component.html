@@ -10,10 +10,4 @@
     </li>
   </ul>
 </div>
-<h2 class="dinoHeader">{{selectedDino.name}} details!</h2>
-<ul class="dinoOverview">
-  <li><label>name: </label>{{selectedDino.name}}</li>
-  <li><label>height: </label>{{selectedDino.size}}</li>
-  <li><label>went extinct: </label>{{selectedDino.extinction}}</li>
-</ul>
-
+<app-dino-detail [dino]="selectedDino"></app-dino-detail>
