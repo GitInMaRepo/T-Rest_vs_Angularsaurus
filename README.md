@@ -12,4 +12,7 @@ Things not represented:
 - Getting Karma&Jasmine
 - Some minor port configurations for NancyFX
 
-TBC...
+Some of the comments are downright lies:
+
+- I never use the "single dinosaur function"
+- The first time I wrote that I had created a new component I didn't
