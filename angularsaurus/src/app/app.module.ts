@@ -4,11 +4,13 @@ import { stegoservice } from './services/stegoservice';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { DinoDetailComponent } from './dino_detail.component';
+import { SaveNewDinoComponent } from './save-new-dino.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DinoDetailComponent
+    DinoDetailComponent,
+    SaveNewDinoComponent
   ],
   imports: [
     BrowserModule,
