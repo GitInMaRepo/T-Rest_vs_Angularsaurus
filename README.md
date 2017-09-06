@@ -16,3 +16,5 @@ Some of the comments are downright lies:
 
 - I never use the "single dinosaur function"
 - The first time I wrote that I had created a new component I didn't
+- I greatly underestimated ATDD with Jasmine. I will have to work on that in an extra format.
+  So no matter what my checkin comments promise, there will be no ATDD
