@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {stegoservice} from './services/stegoservice';
+import {Stegoservice} from './services/stegoservice';
 import {Dinosaur} from './models/dinosaur';
 
 @Component({
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   dinosFromTRest: Dinosaur[];
   selectedDino: Dinosaur;
 
-  constructor(private dinoService: stegoservice) {
+  constructor(private dinoService: Stegoservice) {
   }
   ngOnInit() {
       this.dinoService.getDinosFromTRest().subscribe(p => this.dinosFromTRest = p);

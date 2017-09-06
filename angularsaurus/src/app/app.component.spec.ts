@@ -6,7 +6,7 @@ import { DinoDetailComponent } from './dino_detail.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { stegoservice } from './services/stegoservice';
+import { Stegoservice } from './services/stegoservice';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -19,7 +19,7 @@ describe('AppComponent', () => {
         BrowserModule,
         HttpModule
       ],
-      providers: [stegoservice],
+      providers: [Stegoservice],
     }).compileComponents();
   }));
 
