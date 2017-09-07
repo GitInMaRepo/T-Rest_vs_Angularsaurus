@@ -28,6 +28,14 @@ namespace Microservatops
                             .WithHeader("Access-Control-Allow-Headers", "Accept, Origin, Content-type");
             };
 
+            Options["/adddinosaur"] = parameter =>
+            {
+                return Response.AsJson(Request)
+               .WithHeader("Access-Control-Allow-Origin", "*")
+               .WithHeader("Access-Control-Allow-Methods", "POST")
+               .WithHeader("Access-Control-Allow-Headers", "Accept, Origin, Content-type");
+            };
+
             Post["/adddinosaur"] = parameter =>
             {
                 var model = this.Bind<Dinosaur>();
