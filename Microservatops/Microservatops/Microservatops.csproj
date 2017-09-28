@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseAdapter.cs" />
     <Compile Include="Dinosaur.cs" />
     <Compile Include="DinosaurRepository.cs" />
     <Compile Include="Program.cs" />

@@ -5,32 +5,21 @@ namespace Microservatops
 {
     public class DinosaurRepository
     {
-        private List<Dinosaur> allDinos;
-        public DinosaurRepository()
-        {
-            allDinos = new List<Dinosaur>
-            {
-            new Dinosaur{Id = 1, Name = "T-Rex", Size = "12 m", Extinction = "66 mil. years ago"},
-            new Dinosaur{Id = 2, Name = "Triceratops", Size = "9m", Extinction = "66 mil. years ago"},
-            new Dinosaur{Id = 3, Name = "Procompsognathus", Size = "1m", Extinction = "200 mil. years ago"}
-            };
-        }
+        private DatabaseAdapter Adaptoraptor = new DatabaseAdapter();
 
         public List<Dinosaur> GetDinosaurs()
         {
-            return allDinos;
+            return Adaptoraptor.GetDinosaurs();
         }
 
         public Dinosaur GetDinosaur(int id)
         {
-            return allDinos.FirstOrDefault(f => f.Id == id);
+            return Adaptoraptor.GetDinosaur(id);
         }
 
         public void AddNewDinosaur(Dinosaur dinosaur)
         {
-            var newIndex = allDinos.Max(f => f.Id);
-            dinosaur.Id = ++newIndex;
-            allDinos.Add(dinosaur);
+            Adaptoraptor.AddNewDinosaur(dinosaur);
         }
     }
 }

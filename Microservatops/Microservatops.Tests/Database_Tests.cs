@@ -5,8 +5,7 @@ using System.IO;
 
 namespace Microservatops.Tests
 {
-    [TestClass]
-    public class Database_Tests
+    public static class Database_Tests
     {
         public const string tableCreationCommand =
 @"CREATE TABLE Dinosaurs (
@@ -14,6 +13,12 @@ namespace Microservatops.Tests
     , Name varchar(255)
     , Size varchar(255)
     , Extinction varchar(255))";
+
+        public const string findTableCommand =
+@"SELECT name 
+    FROM sqlite_master 
+    WHERE type='table' 
+    AND name='Dinosaurs'";
 
         public const string readTableCommand =
 @"SELECT sql
@@ -28,27 +33,34 @@ namespace Microservatops.Tests
     , Size
     , Extinction)
     VALUES 
-    (1, 'T-Rex', '12m', '66 mil.years ago')
-    , (2, 'Triceratops', '9m', '66 mil.years ago')
-    , (1, 'Procompsognathus', '1m', '200 mil.years ago')";
+    (1, 'T-Rex', '12m', '66 mil. years ago')
+    , (2, 'Triceratops', '9m', '66 mil. years ago')
+    , (3, 'Procompsognathus', '1m', '200 mil. years ago')";
 
         public const string selectDataCommand =
 @"SELECT * FROM Dinosaurs";
 
+        public const string deleteRowsCommand =
+@"DELETE FROM Dinosaurs";
+
         public const string tablePath = "C:/temp/MySQLiteDB.s3db";
 
-        [TestMethod]
-        public void CreateDatabase()
+        public static void DatabaseBuildup_CreateTheDinoTable()
         {
-            File.Delete(tablePath);
-
             SQLiteConnection conn = new SQLiteConnection($"Data Source={tablePath}");
             conn.Open();
 
-            SQLiteCommand create = new SQLiteCommand(conn);
-            create.CommandText =  tableCreationCommand;
-            create.ExecuteNonQuery();
-
+            SQLiteCommand find = new SQLiteCommand(conn);
+            find.CommandText = findTableCommand;
+            var foundTable = find.ExecuteReader();
+            if(!foundTable.HasRows)
+            {
+                SQLiteCommand create = new SQLiteCommand(conn);
+                create.CommandText = tableCreationCommand;
+                create.ExecuteNonQuery();
+            }
+            foundTable.Close();
+            
             SQLiteCommand assert = new SQLiteCommand(conn);
             assert.CommandText = readTableCommand;
             var assertReader = assert.ExecuteReader();
@@ -61,13 +73,17 @@ namespace Microservatops.Tests
             {
                 assertReader[0].Should().Be(tableCreationCommand);
             }
+            assertReader.Close();
         }
 
-        [TestMethod]
-        public void AddDefaultValuesToDatabase()
+        public static void DatabaseBuildup_FillDinosaurTableWithDefaultValues()
         {
             SQLiteConnection conn = new SQLiteConnection($"Data Source={tablePath}");
             conn.Open();
+
+            SQLiteCommand removeOldData = new SQLiteCommand(conn);
+            removeOldData.CommandText = deleteRowsCommand;
+            removeOldData.ExecuteNonQuery();
 
             SQLiteCommand addDefaultData = new SQLiteCommand(conn);
             addDefaultData.CommandText = addDataCommand;
@@ -94,6 +110,7 @@ namespace Microservatops.Tests
                 dinoReader[1].Should().Be(expected[currentExpectedIndex]);
                 currentExpectedIndex++;
             }
+            dinoReader.Close();
         }
     }
 }
