@@ -1,0 +1,8 @@
+<div>
+    <ul class="dinoOverview">
+        <li *ngFor="let dino of dinosFromTRest" (click)="onclick(dino)">
+            <span class="dinoId">{{dino.id}}</span> {{dino.name}}
+            <br />
+        </li>
+    </ul>
+</div>

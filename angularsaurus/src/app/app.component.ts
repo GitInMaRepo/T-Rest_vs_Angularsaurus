@@ -7,18 +7,8 @@ import {Dinosaur} from './models/dinosaur';
   templateUrl: './app.component.html',
   styleUrls: ['./all_components.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'The Dino List';
   dinosFromTRest: Dinosaur[];
   selectedDino: Dinosaur;
-
-  constructor(private dinoService: Stegoservice) {
-  }
-  ngOnInit() {
-      this.dinoService.getDinosFromTRest().subscribe(p => this.dinosFromTRest = p);
-  }
-
-  onclick(dino: Dinosaur) {
-    this.selectedDino = dino;
-  }
 }
