@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { DinoDetailComponent } from './dino_detail.component';
 import { SaveNewDinoComponent } from './save-new-dino.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SaveNewDinoComponent } from './save-new-dino.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [Stegoservice],
   bootstrap: [AppComponent]

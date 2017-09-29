@@ -15,8 +15,7 @@ export class Stegoservice {
         .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 
-    addNewDinosaur() {
-        const newDino = new Dinosaur('Diplodocus');
+    addNewDinosaur(newDino: Dinosaur) {
         const requestHeaders = new Headers({'Content-Type': 'application/json'});
         const requestOptions = new RequestOptions({headers: requestHeaders});
         const body = JSON.stringify(newDino);

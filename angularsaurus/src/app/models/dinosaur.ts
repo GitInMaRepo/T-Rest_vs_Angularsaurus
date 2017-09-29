@@ -1,5 +1,7 @@
 export class Dinosaur {
-   constructor(
-      public name: string
-   ) {}
+    constructor(
+      public id: number,
+      public name: string,
+      public size: string,
+      public extinction: string) {}
 }

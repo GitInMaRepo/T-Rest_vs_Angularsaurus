@@ -1,2 +1,19 @@
-<h1>Add a new Dino</h1>
-<div><button (click)="addANewDino()">Do it!</button></div>
+<h1 class="dinoHeader">Add a new Dino</h1>
+<ul class="dinoOverview">
+    <form (ngSubmit)="onSubmit()" #dinoForm="ngForm">
+        <li>
+        <label>name: </label>
+        <input type="text" class="form-control" [(ngModel)]="newDino.name" name="name" id="name" />
+        <li>
+        <label>size: </label>
+        <input type="text" class="form-control" [(ngModel)]="newDino.size" name="size" id="size" />
+        </li>
+        <li>
+        <label>extinction: </label>
+        <input type="text" class="form-control" [(ngModel)]="newDino.extinction" name="extinction" id="extinction" />
+        </li>
+        <li>
+        <button type="submit" class="btn btn-success">Submit</button>
+        </li>
+    </form>
+</ul>
