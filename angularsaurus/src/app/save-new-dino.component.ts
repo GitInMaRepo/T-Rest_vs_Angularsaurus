@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 import {Stegoservice} from './services/stegoservice';
 import {Dinosaur} from './models/dinosaur';
 
@@ -11,7 +12,8 @@ import {Dinosaur} from './models/dinosaur';
    newDino = new Dinosaur(0, 'name', 'size', 'date');
    submitted = false;
 
-  constructor(private dinoService: Stegoservice) {
+  constructor(private dinoService: Stegoservice,
+              private router: Router) {
   }
 
   onSubmit() {

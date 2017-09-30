@@ -15,6 +15,12 @@ export class Stegoservice {
         .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 
+    getSingleDinoFromTRest(id: number): Observable<Dinosaur> {
+        return this.http.get(`http://localhost:8088/dinosaur/${id}`)
+        .map((response: Response) => response.json())
+        .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+
     addNewDinosaur(newDino: Dinosaur) {
         const requestHeaders = new Headers({'Content-Type': 'application/json'});
         const requestOptions = new RequestOptions({headers: requestHeaders});

@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   { path: 'dinos', component: DinosOverviewComponent },
   { path: 'new-dino', component: SaveNewDinoComponent },
+  { path: 'dinos/dinodetails/:id', component: DinoDetailComponent },
   { path: '', component: DinosOverviewComponent}
 ];
 
