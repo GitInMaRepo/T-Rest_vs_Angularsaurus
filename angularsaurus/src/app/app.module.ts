@@ -10,9 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
   { path: 'dinos', component: DinosOverviewComponent },
-  { path: 'new-dino', component: SaveNewDinoComponent }
+  { path: 'new-dino', component: SaveNewDinoComponent },
+  { path: '', component: DinosOverviewComponent}
 ];
 
 @NgModule({
