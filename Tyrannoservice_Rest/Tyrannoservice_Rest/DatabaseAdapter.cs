@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 
-namespace Microservatops
+namespace TyprannoServiceRest
 {
     internal class DatabaseAdapter
     {

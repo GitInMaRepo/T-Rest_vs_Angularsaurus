@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data.SQLite;
 using System.IO;
 
-namespace Microservatops.Tests
+namespace TyprannoServiceRest.Tests
 {
     public static class Database_Tests
     {

@@ -70,16 +70,16 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Database_Tests.cs" />
-    <Compile Include="Microservatops_Tests.cs" />
+    <Compile Include="Tyrannoservice_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Microservatops\Microservatops.csproj">
+    <ProjectReference Include="..\Tyrannoservice_Rest\Tyrannoservice_Rest.csproj">
       <Project>{9066b9b1-2ddc-420b-aeb1-532909a3c5a4}</Project>
-      <Name>Microservatops</Name>
+      <Name>Tyrannoservice_Rest</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

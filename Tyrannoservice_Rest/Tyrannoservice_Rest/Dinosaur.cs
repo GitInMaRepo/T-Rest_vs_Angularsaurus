@@ -1,4 +1,4 @@
-﻿namespace Microservatops
+﻿namespace TyprannoServiceRest
 {
     public class Dinosaur
     {

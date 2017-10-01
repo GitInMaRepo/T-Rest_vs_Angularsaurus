@@ -1,7 +1,7 @@
 ﻿using Nancy;
 using Nancy.ModelBinding;
 
-namespace Microservatops
+namespace TyprannoServiceRest
 {
     public class Tyrannoservice_Rest : NancyModule
     {

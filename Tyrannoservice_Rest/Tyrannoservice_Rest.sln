@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservatops", "Microservatops\Microservatops.csproj", "{9066B9B1-2DDC-420B-AEB1-532909A3C5A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyrannoservice_Rest", "Tyrannoservice_Rest\Tyrannoservice_Rest.csproj", "{9066B9B1-2DDC-420B-AEB1-532909A3C5A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservatops.Tests", "Microservatops.Tests\Microservatops.Tests.csproj", "{D8C33B78-1F91-456D-A8AE-4CC3AF5023C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyrannoservice_Rest.Tests", "Tyrannoservice_Rest.Tests\Tyrannoservice_Rest.Tests.csproj", "{D8C33B78-1F91-456D-A8AE-4CC3AF5023C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

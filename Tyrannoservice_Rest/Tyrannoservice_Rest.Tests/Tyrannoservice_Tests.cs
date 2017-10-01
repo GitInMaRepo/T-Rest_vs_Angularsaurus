@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-namespace Microservatops.Tests
+namespace TyprannoServiceRest.Tests
 {
     [TestClass]
     public class Tyrannoservice_Tests

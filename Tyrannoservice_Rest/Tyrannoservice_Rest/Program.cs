@@ -1,7 +1,7 @@
 ﻿using Nancy.Hosting.Self;
 using System;
 
-namespace Microservatops
+namespace TyprannoServiceRest
 {
     class Program
     {
