@@ -11,6 +11,7 @@ Things not represented:
 - Getting NancyFX
 - Getting Karma&Jasmine
 - Some minor port configurations for NancyFX
+- Installing the Express framework 
 
 Some of the comments are downright lies:
 
