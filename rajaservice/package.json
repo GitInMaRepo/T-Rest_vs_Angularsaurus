@@ -1,0 +1,14 @@
+{
+  "name": "rajaservice",
+  "version": "1.0.0",
+  "description": "small service",
+  "main": "index.js",
+  "scripts": {
+    "test": "soon"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
