@@ -22,5 +22,5 @@ Some of the comments are downright lies:
 
 Note:
 This is a project I did for fun in my spare time- So I decided to have 
-fun with while naming projects/executables. If you are not having fun with my 
+fun while naming projects/executables. If you are not having fun with my 
 names, the fork button is right up there.
