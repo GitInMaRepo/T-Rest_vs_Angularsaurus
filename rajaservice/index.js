@@ -4,6 +4,10 @@ var app = express()
 var innerRequest = new httpRequest() 
 
 app.get('/', function (req, res) {
+    res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+
     innerRequest.open('GET', "http://localhost:8088/knowndinosaurs", false);
     innerRequest.send();
     var rando = Math.floor(Math.random() * 3);
