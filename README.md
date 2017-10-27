@@ -19,3 +19,8 @@ Some of the comments are downright lies:
 - The first time I wrote that I had created a new component I didn't
 - I greatly underestimated ATDD with Jasmine. I will have to work on that in an extra format.
   So no matter what my checkin comments promise, there will be no ATDD
+
+Note:
+This is a project I did for fun in my spare time- So I decided to have 
+fun with while naming projects/executables. If you are not having fun with my 
+names, the fork button is right up there.
